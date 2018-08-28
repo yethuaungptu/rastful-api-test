@@ -11,19 +11,19 @@ router.get('/add', function(req, res, next) {
   res.json({msg:'please enter user field',fields_name:'name,phone,job,email,password'})
 });
 
-router.post('/add',(req,res,next)=>{
-  var user = new User();
-  user.name = req.body.name;
-  user.phone = req.body.phone;
-  user.job = req.body.job;
-  user.email = req.body.email;
-  user.password = req.body.password;
-
-  user.save(function(err,user){
-    if(err) next(err);
-      res.json({msg:'Succefully add',data:user});
-
-  });
-});
+// router.post('/add',(req,res,next)=>{
+//   var user = new User();
+//   user.name = req.body.name;
+//   user.phone = req.body.phone;
+//   user.job = req.body.job;
+//   user.email = req.body.email;
+//   user.password = req.body.password;
+//
+//   user.save(function(err,user){
+//     if(err) next(err);
+//       res.json({msg:'Succefully add',data:user});
+//
+//   });
+// });
 
 module.exports = router;
