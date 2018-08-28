@@ -18,9 +18,10 @@ router.post('/add',(req,res,next)=>{
   user.job = req.body.job;
   user.email = req.body.email;
   user.password = req.body.password;
-
+  console.log('///user',user);
   user.save(function(err,user){
     if(err) next(err);
+    console.log('user',user);
       res.json({msg:'Succefully add',data:user});
 
   });
