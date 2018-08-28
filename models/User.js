@@ -28,35 +28,35 @@ var UserSchema = new Schema({ // define data fields
         type: String,
         required: true,
     },
-    role: {
-        type: String,
-        default: 'USER', // 'USER', 'ADMIN'
-    },
-    lastSignedIn: {
-        type: Date,
-    },
-    // System fields
-    isDeleted: {
-        type: Boolean,
-        default: false,
-    },
-    // Audit fields
-    updated: {
-        type: Date,
-        default: Date.now,
-    },
-    inserted: {
-        type: Date,
-        default: Date.now,
-    },
-    updatedby: {
-        type: Schema.Types.ObjectId,
-        ref: 'Users',
-    },
-    insertedby: {
-        type: Schema.Types.ObjectId,
-        ref: 'Users',
-    },
+    // role: {
+    //     type: String,
+    //     default: 'USER', // 'USER', 'ADMIN'
+    // },
+    // lastSignedIn: {
+    //     type: Date,
+    // },
+    // // System fields
+    // isDeleted: {
+    //     type: Boolean,
+    //     default: false,
+    // },
+    // // Audit fields
+    // updated: {
+    //     type: Date,
+    //     default: Date.now,
+    // },
+    // inserted: {
+    //     type: Date,
+    //     default: Date.now,
+    // },
+    // updatedby: {
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'Users',
+    // },
+    // insertedby: {
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'Users',
+    // },
 });
 
 /**

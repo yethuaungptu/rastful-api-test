@@ -23,7 +23,7 @@ router.post('/add',(req,res,next)=>{
     if(err) next(err);
       res.json({msg:'Succefully add',data:user});
 
-  })
-})
+  });
+});
 
 module.exports = router;
