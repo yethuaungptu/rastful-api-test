@@ -27,4 +27,11 @@ router.post('/add',(req,res,next)=>{
   });
 });
 
+router.get('/list',(req,res)=>{
+  User.find({},(err,rtn)=>{
+    if(err) next(err);
+    res.json({msg:'User List',data:rtn});
+  });
+});
+
 module.exports = router;
