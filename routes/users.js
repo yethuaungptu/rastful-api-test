@@ -19,8 +19,8 @@ router.post('/add',(req,res,next)=>{
   user.email = req.body.email;
   user.password = req.body.password;
 
-  user.save((err,user)=>{
-    if(err) throw err;
+  user.save(function(err,user){
+    if(err) next(err);
       res.json({msg:'Succefully add',data:user});
 
   })
