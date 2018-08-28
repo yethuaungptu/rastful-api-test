@@ -21,7 +21,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 mongoose.Promise = global.Promise; // use promise
-mongoose.connect('mongodb://yethuaung:zikimi95@ds135852.mlab.com:35852/rastful'); // driverName://dbIP/dbName
+mongoose.connect('mongodb://yethuaung:Zikimi95@ds135852.mlab.com:35852/rastful'); // driverName://dbIP/dbName
 // mongoose.connect('mongodb://127.0.0.1/librarydb'); // studydb is anyname can insert
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
