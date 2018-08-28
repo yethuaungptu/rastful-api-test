@@ -21,11 +21,8 @@ router.post('/add',(req,res,next)=>{
 
   user.save((err,user)=>{
     if(err) throw err;
-    if(user) {
       res.json({msg:'Succefully add',data:user});
-    }else{
-      res.json({msg:"Some thing was worng"});
-    }
+
   })
 })
 
