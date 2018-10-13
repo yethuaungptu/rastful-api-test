@@ -32,7 +32,7 @@ router.get('/list',(req,res)=>{
   User.find({},(err,rtn)=>{
     if(err) next(err);
     for(var k in rtn){
-      arr.push(rtn[k].email);
+      arr.push(rtn[k].email,rtn[k].name,rtn[k].job);
     }
     res.json({msg:'User List',data:rtn,arr:arr});
   });
