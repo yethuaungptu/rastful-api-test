@@ -28,9 +28,13 @@ router.post('/add',(req,res,next)=>{
 });
 
 router.get('/list',(req,res)=>{
+  var arr = []
   User.find({},(err,rtn)=>{
     if(err) next(err);
-    res.json({msg:'User List',data:rtn});
+    for(var k in rtn){
+      arr.push(rtn[k].email);
+    }
+    res.json({msg:'User List',data:rtn,arr:arr});
   });
 });
 
