@@ -37,5 +37,11 @@ router.get('/list',(req,res)=>{
     res.json({msg:'User List',data:rtn,arr:arr});
   });
 });
+ router.get('/listO',(req,res)=>{
+   User.find({},(err,rtn)=>{
+     if(err) throw err;
+     res.json({rtn})
+   })
+ })
 
 module.exports = router;
